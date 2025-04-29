@@ -4,7 +4,7 @@ import Header from "../Components/Header";
 
 const AppLayout = () => {
   return (
-    <div className="bg-neutral-900 h-[100svh] text-white">
+    <div className="bg-gray-50">
       <header>
         <Header />
       </header>
