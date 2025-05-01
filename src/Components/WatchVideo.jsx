@@ -12,20 +12,20 @@ const WatchVideo = () => {
     const fetchVideoData = async () => {
       const response = await fetch(VIDEO_OVERVIEW_API(videoId));
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
     };
 
     fetchVideoData();
   }, [videoId]);
 
   return (
-    <div className="rounded-2xl  overflow-hidden">
+    <div className="rounded-2xl  overflow-hidden col-span-8">
       <iframe
         src={`https://www.youtube.com/embed/${videoId}`}
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
-        className="aspect-video w-[60%] ml-20 mt-10  rounded-2xl"
+        className="aspect-video w-full rounded-2xl"
       ></iframe>
     </div>
   );
